@@ -68,7 +68,7 @@ class Details extends React.Component
 
         axios({
             method : 'GET',
-            url : `http://localhost:2020/api/resturantbyid/${resturantId}`,
+            url : `https://backendzomato.herokuapp.com/api/resturantbyid/${resturantId}`,
             headers : { 'Content-Type' : 'application/json' },
         }).then(response => this.setState({resturantData : response.data.resturant, resturantId})).catch()
     }
@@ -83,7 +83,7 @@ class Details extends React.Component
         axios(
             {
                 method : 'GET',
-                url:`http://localhost:2020/api/getMenu/${resturantId}`,
+                url:`https://backendzomato.herokuapp.com/api/getMenu/${resturantId}`,
                 headers:{ 'Content-Type' : 'application/json' }
             }
         ).then(response => {
@@ -181,7 +181,7 @@ class Details extends React.Component
         form.remove()
     }
       getData = (data) => {
-        return fetch(`http://localhost:2020/api/payment`, {
+        return fetch(`https://backendzomato.herokuapp.com/api/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
