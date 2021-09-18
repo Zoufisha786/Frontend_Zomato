@@ -217,6 +217,7 @@ class Header extends React.Component
     render()
     {
         const { loginModalIsOpen,isLogged,userName,image,email, createModalIsOpen,loginWithCredit,} = this.state;
+        console.log(userName, isLogged);
         return(
             <div class="app_header">
                             <button class="headerE" onClick={this.handleHome}>e!</button>
